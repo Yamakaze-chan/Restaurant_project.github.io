@@ -82,7 +82,7 @@ window.onscroll = function() {
     // make navbar fixed & change logo color
     if (window.pageYOffset > headerSection.offsetHeight - 75) {
         nav.classList.add("active");
-        logoImage.src = "../assets/logo/logo_small.jpg";
+        logoImage.src = "../assets/logo/logo_small2.jpg";
     } else {
         nav.classList.remove("active");
         logoImage.src = "../assets/logo/logo_small.jpg";
