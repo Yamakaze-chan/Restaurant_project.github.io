@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+ body {
+  position: relative;
+  min-height: 120vh;
+  background: linear-gradient(rgba(255,255,255,.0), rgba(255,255,255,.1),rgba(255,255,255,.3), rgba(255,255,255,.5)), url("../assets/pics/reservation(4).jpg") no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.form-structor {
+  top: 50px;
+  background-color: #222;
+  border-radius: 15px;
+  height: 90vh;
+  width: 90vh;
+  position: relative;
+  overflow: auto;
+}
+.form-structor::-webkit-scrollbar {
+  display: none;
+}
+.form-structor::after {
+  content: "";
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.1;
+  background-image: url("../assets/pics/view_nha_hang.jpg");
+}
+.form-structor .signup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  width: 65%;
+  z-index: 5;
+  -webkit-transition: all 0.3s ease;
+}
+.form-structor .signup .form-group{
+    color: white;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    margin: 0 auto 30px;
+    display: inline-block;
+  }
+
+.form-structor .signup .form-group #name {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #eee;
+    outline: none;
+    background: none;
+    color: #eee;
+    display: block;
+    float: right;
+    width: 50%;
+}
+
+.form-structor .signup .form-group #email {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #eee;
+  outline: none;
+  background: none;
+  color: #eee;
+  display: block;
+  float: right;
+  width: 50%;
+}
+
+.form-structor .signup .form-group #time {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #eee;
+  outline: none;
+  background: none;
+  color: #eee;
+  float: right;
+  width: 50%;
+}
+.form-structor .signup .form-group #time #hour {
+  overflow: auto;
+  text-overflow: ellipsis
+
+}
+.form-structor .signup .form-group #time #minute {
+  overflow: auto;
+  text-overflow: ellipsis
+}
+
+.form-structor .signup.slide-up {
+  top: 5%;
+  -webkit-transform: translate(-50%, 0%);
+  -webkit-transition: all 0.3s ease;
+}
+.form-structor .signup.slide-up .form-holder, .form-structor .signup.slide-up .submit-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+.form-structor .signup.slide-up .form-title {
+  font-size: 1em;
+  cursor: pointer;
+}
+.form-structor .signup.slide-up .form-title span {
+  margin-right: 5px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+}
+.form-structor .signup .form-title {
+  color: #fff;
+  font-size: 1.7em;
+  text-align: center;
+}
+.form-structor .signup .form-title span {
+  color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease;
+}
+.form-structor .signup .form-holder {
+  border-radius: 15px;
+  background-color: #fff;
+  overflow: hidden;
+  margin-top: 50px;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+}
+.form-structor .signup .form-holder .input {
+  border: 0;
+  outline: none;
+  box-shadow: none;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  font-size: 12px;
+}
+.form-structor .signup .form-holder .input:last-child {
+  border-bottom: 0;
+}
+.form-structor .signup .form-holder .input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+.form-structor .signup .submit-btn {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+  border: 0;
+  border-radius: 15px;
+  display: block;
+  margin: 15px auto;
+  padding: 15px 45px;
+  width: 100%;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 0.3s ease;
+}
+.form-structor .signup .submit-btn:hover {
+  transition: all 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+
+
+.formInput {
+    position: relative;
+    margin: 0 0 8px;
+    padding: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    color: white;
+}
+
+.formInput input {
+    box-sizing: border-box;
+    z-index: 1;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    font-size: 1em;
+    font: inherit;
+    border: 0;
+    margin: 0;
+    padding: 0 4px 0 56px;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    width: 100%;
+    height: 47px;
+    line-height: 47px;
+    background: transparent;
+    color: inherit;
+    transition: border-color .2s, color .2s, background-color .4s;
+}
+
+.formInput.hasTextarea {
+    line-height: 24px;
+    height: 191px;
+}
+.formInput.hasTextarea i {
+    border-radius: 0 0 3px;
+}
+.formInput textarea {
+    box-sizing: border-box;
+    resize: none;
+    z-index: 1;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: left;
+    font-size: 1em;
+    font: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    margin: 0;
+    padding: 12px 4px 6px 56px;
+    width: 100%;
+    height: 100%;
+    line-height: 24px;
+    background: transparent;
+    color: inherit;
+    transition: border-color .2s, color .2s, background-color .4s;
+}
+.formInput input[disabled]:active,.formInput input[disabled]:focus,
+.formInput input[disabled]:hover {
+    border-color: transparent;
+    background-color: transparent;
+}
+.formInput input:active, .formInput input:focus,
+.formInput textarea:active, .formInput textarea:focus,
+.formInput.dateSelector:hover input{
+    border-color: #b0b0b0;
+    outline: none;
+    color: gray;
+    background-color: rgba(0,0,0,0.025);
+}
+.formInput.radioBtn {
+    padding-bottom: 24px;
+}
+.formInput.radioBtn .formInputChild {
+    font: 300 1em/28px "Open Sans";
+}
+.formInput.radioBtn input {
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    margin: 7px 9px;
+    position: relative;
+}
+.formInput.radioBtn label {
+    font-size: 0.95em;
+}
+
+.formInput .formInputDescription {
+    position: relative;
+    padding: 0 0 0 56px;
+}
+.formInput .formInputChild {
+    font: 300 1em/48px "Open Sans";
+    position: relative;
+    padding: 0 0 0 56px;
+}
+.formInput.checkboxBtn input {
+    width: 14px;
+    height: 14px;
+    margin: 17px 16px 16px;
+    padding: 0;
+}
+.formInput.checkboxBtn i {
+    display: none;
+}
+.formInput.dateSelector {
+    transition: background-color .2s;
+}
+.formInput.dateSelector #date{
+  transition: background-color .2s;
+  width: 50%;
+  float: right;
+}
+.formInput.dateSelector input {
+  height: 80%;
+  justify-items: center;
+}
+
+
+
+
+.calendar {
+    position: relative;
+    display: block;
+    font: 500 0.8em/30px "Open Sans";
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+    padding: 0 0 0 57px;
+    color: white;
+}
+.calendar .view {
+    position: relative;
+    float: left;
+}
+.calendar .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.calendar .nav .btn {
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    cursor: pointer;
+    cursor: hand;
+    width: 32px;
+    height: 32px;
+    line-height: 31px;
+    top: 0;
+    left: auto;
+    justify-items: center;
+    text-align: center;
+    transition: opacity .5s;
+    border-radius: 4px;
+}
+.calendar .nav .btn:hover {
+    color: #808080;
+    background: #e0e0e0;
+    border-color: #606060;
+}
+
+.calendar .nav .prev {
+    left: 0;
+}
+
+.calendar .nav .prev-year {
+    opacity: 1;
+    left: 32px;
+}
+.calendar .nav:hover .prev-year {
+    opacity: 1;
+}
+.calendar .nav .next-year {
+    opacity: 1;
+    right: 32px !important;
+}
+.calendar .nav:hover .next-year {
+    opacity: 1;
+}
+
+.calendar .nav .next {
+    right: 0;
+}
+
+
+
+
+.calendar .head .title {
+    font: 300 1.2em/32px "Open Sans";
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+.calendar .head span {
+    cursor: pointer;
+}
+.calendar .row {
+    clear: both;
+}
+.calendar .row.th {
+    font-weight: 700;
+    text-transform: uppercase;
+    height: 40px;
+}
+.calendar .row.th .C {
+    border-bottom: 1px solid #c0c0c0;
+    border-radius: 0;
+}
+.calendar .C {
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    transition: background-color .05s, color .05s;
+    border-radius: 50%;
+}
+.calendar .C.mn {
+    cursor: pointer;
+    cursor: hand;
+}
+.calendar .C.mn:hover {
+    background: #565656;
+    color: white;
+}
+.calendar .C.g {
+    color: #a0a0a0;
+    font-weight: 300;
+}
+.calendar .C.slctd {
+    background: #202020;
+    color: white;
+    font-size: 1.15em;
+    font-weight: 300;
+}
+.calendar .C.today {
+    font-weight: 900;
+    font-size: 1.3em;
+}
+
+.calendar .selected {
+    margin: 0 0 0 64px;
+    float: right;
+    text-align: center;
+    width: 280px;
+}
+.calendar .selected .desc {
+    border-bottom: 1px solid #c0c0c0;
+}
+
+.calendar .selected .val {
+    padding: 0 8px;
+    background: #f0f0f0;
+    color: #808080;
+}
+
+
+.calendar .dayArea {
+    position: relative;
+    width: 280px;
+    height: 240px;
+    overflow: hidden;
+}
+.calendar .dayArea .mArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  color: #fff;
+  width: calc(50% - 10px);
+  height: 40px;
+}
+.select-styled {
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e74c3c;
+  padding: 8px 15px;
+  transition: (all 0.2s ease-in);
+  z-index: 0;
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #e74c3c transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  &:hover {
+    background-color: darken(#e74c3c, 2);
+  }
+  &:active, &.active {
+    background-color: darken(#e74c3c, 5);
+    &:after {
+      top: 9px;
+      border-color: transparent transparent #e74c3c transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: darken(#e74c3c, 5);
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid darken(#e74c3c, 10);
+    transition: (all 0.15s ease-in);
+    &:hover, 
+    &.is-selected {
+      color: #e74c3c;
+      background: #fff;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
+}
+
+.form-structor .signup .form-group #party-size {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #eee;
+  outline: none;
+  background: none;
+  color: #eee;
+  display: block;
+  float: right;
+  width: 50%;
+}
+
+.form-structor .signup .form-group #special-requests {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-color: #eee;
+  outline: none;
+  background: none;
+  color: #eee;
+  display: block;
+  float: right;
+  width: 99%;
+}
+.form-structor .signup .form-group #special-requests::-webkit-scrollbar {
+  display: none;
+}
+
+
+.form-structor .signup .form-group #submit{
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  height: 50px;
+  width: 200px;
+  color: white;
+  transition: 0.25s;
+}
+.form-structor .signup .form-group #submit:hover,.form-structor .signup .form-group #submit:focus{
+  border-color: #66c887;
+  color: #fff;
+  box-shadow: inset 200px 0 0 0 #66c887;
+}
+
+/*Start Mutual*/
+p, .a-CTA, input, header .navigation-bar a, .copyright li, .contact .form form label, .contact .form form button {
+  font-family: Cabin, sans-serif;
+}
+.fa-asterisk, .a-CTA, h2, header .navigation-bar a:hover, header nav.active .navigation-bar a:hover, footer .social-media .links a:hover, .copyright .info li a, .copyright .CTA li a:hover {
+  color: #a96700;
+}
+header nav .navigation-bar .underline, header .text .button button:hover, .contact .form form button:hover, .contact .text i:hover {
+  background-color: #a96700;
+}
+header nav, header .navigation-bar ul, .about-us, .reservation, .about-us .image-container, .reservation .image-container, .menu, .menu .menu-image-container, footer .contact-container, .copyright ul, .contact {
+  display: flex;
+}
+header nav .toggle, header nav .toggle span, header .navigation-bar, header .navigation-bar ul, .menu .box-model .close, footer .social-media .links a, .copyright .CTA li a {
+  transition: .3s;
+}
+header, header nav .toggle span, header .navigation-bar a, header .text, header .text .arrow .left, header .text .arrow .right, .recipes, .menu .box-image-container, .fixed-image .text, .copyright, .copyright .arrow-up {
+  position: relative;
+}
+header nav, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, .menu .box-model, .menu .box-image-container, .menu .box-image-container .box-image {
+  width: 100%;
+}
+button, .dots > div, header nav .toggle, header .arrow-down, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .menu-image-container .image img, footer .newsletter i, .copyright .arrow-up {
+  cursor: pointer;
+}
+h1, h3, header .navigation-bar a, header .text span, .menu .box-model .close:hover, footer .text h2, footer .text p, footer .social-media .links a, .contact .text i, .contact .form form button {
+  color: #f5cc78;
+}
+header nav, header .navigation-bar.show, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, header .text .arrow .left:after, .menu .box-model, .copyright .arrow-up {
+  left: 0;
+}
+/*End Mutual*/
+
+/*Start Header*/
+header {
+  height: calc(100vh - 22px);
+  background-size: cover;
+  /*background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988534/header.jpg") fixed bottom;*/
+  background-color: white;
+  padding: 20px 70px;
+}
+header nav {
+  position: fixed;
+  top: 0;
+  padding: 36px 36px 20px;
+  z-index: 20;
+}
+header nav .toggle {
+  display: none;
+  top: 26px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 21;
+}
+header nav .toggle:focus {
+  outline: none;
+}
+header nav.active .toggle span {
+  background-color: #000;
+}
+header nav .toggle.active {
+  left: 32%;
+}
+header nav .toggle.active .first {
+  top: 16px;
+  transform: rotate(-45deg);
+}
+header nav .toggle.active .last {
+  top: 0;
+  transform: rotate(45deg);
+}
+header nav .toggle .hide {
+  transition: 0s;
+  visibility: hidden;
+}
+header nav .toggle span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  border-radius: 40px;
+}
+header nav .toggle span:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+header nav .logo {
+  flex-basis: 56%;
+  padding-left: 50px;
+}
+header .navigation-bar.show {
+  width: 40%;
+}
+header .navigation-bar.show a {
+  color: #ccc !important;
+}
+header .navigation-bar.show a:hover {
+  color: #fff !important;
+}
+header .navigation-bar ul li {
+  flex: 1;
+  padding: 0 10px;
+}
+header .navigation-bar a {
+  text-decoration: none;
+  transition: all .5s;
+  font-size: 16px;
+}
+header nav.active .navigation-bar a {
+  color: #000;
+}
+header .navigation-bar .underline {
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: -4px;
+  transition: all .3s;
+  display: block;
+}
+header .text {
+  top: 24%;
+}
+header .text h1 {
+  margin-bottom: 0;
+}
+header .text .arrow .left, header .text .arrow .right {
+  height: 3px;
+  width: 100px;
+}
+header .text .arrow .left {
+  left: -4%;
+  bottom: -10px;
+}
+header .text .arrow .middle {
+  top: 0px;
+}
+header .text .arrow .right {
+  right: -4%;
+  bottom: -10px;
+}
+header .text .arrow .left:after, header .text .arrow .right:after {
+  content: '';
+  border: 10px solid transparent;
+  border-left-color: #fff;
+  top: -8px;
+}
+header .text .arrow .right:after {
+  right: 0;
+  border-color: transparent #fff transparent transparent;
+}
+header .text .arrow .fa-asterisk {
+  vertical-align: super;
+}
+header .text span {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+header .text .button button, .contact form button {
+  border: none;
+  padding: 9px 18px;
+  letter-spacing: 2.4px;
+  font-size: 12px;
+  font-family: source_sans_problack, sans-serif;
+  border-radius: 3px;
+}
+header .text .button button, .contact form button:focus {
+  outline: none;
+}
+header .svg-down {
+  bottom: 0;
+  left: 50%;
+  z-index: 5;
+  margin-left: -96px;
+  margin-bottom: -12px;
+  color: #fff;
+}
+header .arrow-down {
+  width: 70px;
+  height: 50px;
+  bottom: -10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 10;
+  background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/arrow-down.png") no-repeat center;
+}
+/*End Header*/

@@ -568,6 +568,7 @@ header .text .arrow .left:after, header .text .arrow .right:after, header .text 
 /*Start Header*/
 header {
     height: calc(100vh - 22px);
+    width: 100%;
     background-size: cover;
     /*background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988534/header.jpg") fixed bottom;*/
     background-color: white;
@@ -575,9 +576,9 @@ header {
 }
 header nav {
     position: fixed;
-    top: 0;
-    padding: 36px 36px 20px;
+    top: 0px;
     z-index: 20;
+    padding: 36px 36px 20px;
 }
 header nav .toggle {
     display: none;
@@ -595,7 +596,7 @@ header nav.active .toggle span {
     background-color: #000;
 }
 header nav .toggle.active {
-    left: 32%;
+    left: 0%;
 }
 header nav .toggle.active .first {
     top: 16px;
@@ -619,11 +620,12 @@ header nav .toggle span:not(:last-of-type) {
     margin-bottom: 6px;
 }
 header nav .logo {
-    flex-basis: 56%;
-    padding-left: 50px;
+    left: 0px;
+    width: 100%;
 }
 header .navigation-bar.show {
-    width: 40%;
+    width: 100%;
+    float: right;
 }
 header .navigation-bar.show a {
     color: #ccc !important;
@@ -726,7 +728,7 @@ header .arrow-down {
 }
 .about-us .text, .reservation .text {
     flex: 50%;
-    padding: 40px 52px 0 0;
+    padding: 40px
 }
 .about-us .text h3, .reservation .text h3 {
     color: #000;
@@ -738,14 +740,14 @@ header .arrow-down {
     flex: 50%;
 }
 .about-us .image, .reservation .image {
-    margin-left: 20px;
+    margin: 20px;
 }
 /*End About-Us*/
 
 /*Start Recipes*/
 .recipes .image {
     height: 350px;
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988529/three-col-1.jpg") fixed center;
+    background: url("../assets/pics/dac-san-mien-nam-8.jpg") fixed center;
     background-size: cover;
 }
 /*End Recipes*/
@@ -853,7 +855,7 @@ header .arrow-down {
 
 /*Start fixed-image*/
 .fixed-image {
-    background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988533/frontpage-menu.jpg") fixed center;
+    background: url("../assets/pics/lau.jpg") fixed center;
     background-size: cover;
     height: 400px;
 }
@@ -1070,10 +1072,8 @@ footer .newsletter i {
 
 @media (max-width: 768px) {
     header nav {
-        display: block;
+        display: contents;
         text-align: center;
-        left: 0;
-        top: 0;
         width: 100%;
         padding-top: 25px;
     }
@@ -1131,7 +1131,7 @@ footer .newsletter i {
         padding-left: 0;
     }
     header nav .toggle.active {
-        left: 36%;
+        left: 0%;
     }
     header .navigation-bar.show {
         padding: 20px;

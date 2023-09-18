@@ -1,0 +1,35 @@
+
+@font-face {
+    font-family: 'MTD Elipses Caps';
+    src:
+        url('../assets/font/MTD Elipses Caps.otf') 
+        format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.logo_text{
+    font-family: 'MTD Elipses Caps';
+    font-size: 90px;
+    color: yellow;
+    font-weight: 900;
+    /*
+    text-shadow:
+    0 0 7px #ffc655,
+    0 0 21px #ffc655,
+    0 0 82px #ffc655,
+    0 0 92px #ffc655,
+    0 0 151px #ffc655;
+    */
+}
+
+.dot {
+    background-color: #bbb;
+    background-color: #1c00ff;
+    text-align: left;
+    /*
+    vertical-align: middle;
+    display: table-cell;
+    */
+  }
+
